@@ -8,3 +8,5 @@ The "Set-dynamic_firewall.ps1" module gets the ip adress of a agent at runtime v
 This ip range is set as a pipeline env variable which is used to open a temporary firewall rule/entry. This same entry is then removed again once the database deployment is completed.
 
 The intended use of the modules is to have them as a .yml task/stage before and after an intermediate step that e.g. deploys contained db users/roles or even a entire dacpac deployment.
+
+*note:* The most optimal way of solving this issue is hosting the deployment agents internally. But in the case that hosting such agents internally is too complex a task, then these modules can be used as a workaround.
